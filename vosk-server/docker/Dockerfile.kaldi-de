@@ -1,0 +1,27 @@
+FROM alphacep/kaldi-vosk-server:latest
+
+ENV MODEL_VERSION 0.1
+RUN mkdir /opt/kaldi-de \
+   && cd /opt/kaldi-de \
+   && wget -q http://ltdata1.informatik.uni-hamburg.de/kaldi_tuda_de/de_400k_nnet3chain_tdnn1f_2048_sp_bi.tar.bz2 \
+   && tar xf de_400k_nnet3chain_tdnn1f_2048_sp_bi.tar.bz2 \
+   && mkdir ivector \
+   && mv de_400k_nnet3chain_tdnn1f_2048_sp_bi/HCLG.fst . \
+   && mv de_400k_nnet3chain_tdnn1f_2048_sp_bi/final.mdl . \
+   && mv de_400k_nnet3chain_tdnn1f_2048_sp_bi/words.txt . \
+   && mv de_400k_nnet3chain_tdnn1f_2048_sp_bi/conf/mfcc_hires.conf mfcc.conf \
+   && mv de_400k_nnet3chain_tdnn1f_2048_sp_bi/phones/word_boundary.int . \
+   && mv de_400k_nnet3chain_tdnn1f_2048_sp_bi/ivector_extractor/final.dubm ivector \
+   && mv de_400k_nnet3chain_tdnn1f_2048_sp_bi/ivector_extractor/final.ie ivector \
+   && mv de_400k_nnet3chain_tdnn1f_2048_sp_bi/ivector_extractor/final.mat ivector \
+   && mv de_400k_nnet3chain_tdnn1f_2048_sp_bi/ivector_extractor/global_cmvn.stats ivector \
+   && mv de_400k_nnet3chain_tdnn1f_2048_sp_bi/ivector_extractor/splice.conf ivector \
+   && mv de_400k_nnet3chain_tdnn1f_2048_sp_bi/ivector_extractor/online_cmvn.conf ivector \
+   && rm -rf de_400k_nnet3chain_tdnn1f_2048_sp_bi \
+   && rm -rf de_400k_nnet3chain_tdnn1f_2048_sp_bi.tar.bz2
+
+RUN sed -i 's:8000:16000:g' /opt/vosk-server/websocket/asr_server.py
+
+EXPOSE 2700
+WORKDIR /opt/vosk-server/websocket
+CMD [ "python3", "./asr_server.py", "/opt/kaldi-de" ]
