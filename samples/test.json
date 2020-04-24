@@ -1,0 +1,132 @@
+{
+  "partial" : ""
+}
+{
+  "partial" : ""
+}
+{
+  "partial" : "one"
+}
+{
+  "partial" : "one zero zero"
+}
+{
+  "partial" : "one zero zero zero"
+}
+{
+  "partial" : "one zero zero zero one"
+}
+{
+  "partial" : "one zero zero zero one"
+}
+{
+  "result" : [{
+      "conf" : 1.000000,
+      "end" : 1.080000,
+      "start" : 0.840000,
+      "word" : "one"
+    }, {
+      "conf" : 1.000000,
+      "end" : 1.530000,
+      "start" : 1.200000,
+      "word" : "zero"
+    }, {
+      "conf" : 1.000000,
+      "end" : 1.950000,
+      "start" : 1.530000,
+      "word" : "zero"
+    }, {
+      "conf" : 1.000000,
+      "end" : 2.310000,
+      "start" : 1.950000,
+      "word" : "zero"
+    }, {
+      "conf" : 1.000000,
+      "end" : 2.610000,
+      "start" : 2.310000,
+      "word" : "one"
+    }],
+  "text" : "one zero zero zero one"
+}
+{
+  "partial" : "i know"
+}
+{
+  "partial" : "i know what you want to"
+}
+{
+  "partial" : "i know what you want to"
+}
+{
+  "partial" : "i know what you want to"
+}
+{
+  "result" : [{
+      "conf" : 1.000000,
+      "end" : 4.080000,
+      "start" : 3.990000,
+      "word" : "i"
+    }, {
+      "conf" : 1.000000,
+      "end" : 4.234023,
+      "start" : 4.080000,
+      "word" : "know"
+    }, {
+      "conf" : 0.862195,
+      "end" : 4.380000,
+      "start" : 4.234023,
+      "word" : "what"
+    }, {
+      "conf" : 0.862171,
+      "end" : 4.500000,
+      "start" : 4.380000,
+      "word" : "your"
+    }, {
+      "conf" : 0.893864,
+      "end" : 4.980000,
+      "start" : 4.500000,
+      "word" : "window"
+    }],
+  "text" : "i know what your window"
+}
+{
+  "partial" : "zero"
+}
+{
+  "partial" : "zero one eight zero"
+}
+{
+  "partial" : "zero one eight zero three"
+}
+{
+  "partial" : "zero one eight zero three"
+}
+{
+  "result" : [{
+      "conf" : 1.000000,
+      "end" : 6.660000,
+      "start" : 6.300000,
+      "word" : "zero"
+    }, {
+      "conf" : 1.000000,
+      "end" : 6.870000,
+      "start" : 6.660000,
+      "word" : "one"
+    }, {
+      "conf" : 1.000000,
+      "end" : 7.140000,
+      "start" : 6.900000,
+      "word" : "eight"
+    }, {
+      "conf" : 1.000000,
+      "end" : 7.500000,
+      "start" : 7.140000,
+      "word" : "zero"
+    }, {
+      "conf" : 1.000000,
+      "end" : 7.980000,
+      "start" : 7.500000,
+      "word" : "three"
+    }],
+  "text" : "zero one eight zero three"
+}
